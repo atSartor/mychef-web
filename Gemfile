@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#user authentication
+gem 'devise'
+
 #Used for login through Google
 gem 'omniauth-google-oauth2'
 
