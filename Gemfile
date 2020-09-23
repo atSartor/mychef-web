@@ -30,9 +30,10 @@ gem 'devise'
 
 #Used for login through Google
 gem 'omniauth-google-oauth2'
-
+gem 'activerecord-session_store'
 #Used for login through Facebook
 gem 'omniauth-facebook'
+gem 'omniauth-github'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
