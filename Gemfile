@@ -34,7 +34,7 @@ gem 'activerecord-session_store'
 #Used for login through Facebook
 gem 'omniauth-facebook'
 gem 'omniauth-github'
-
+gem 'omniauth'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
