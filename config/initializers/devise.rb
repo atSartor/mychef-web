@@ -281,7 +281,7 @@ Devise.setup do |config|
                   Rails.application.credentials.dig(:facebook, :facebook_client_secret), scope: 'public_profile,email',
                   info_fields: 'email, first_name, last_name, picture'
     config.omniauth :google, Rails.application.credentials.dig(:google, :google_client_id),
-                  Rails.application.credentials.dig(:google, :google_client_secret), scope: 'userinfo.email,userinfo.profile',
+                  Rails.application.credentials.dig(:google, :google_client_secret), skip_jwt: true, scope: 'userinfo.email,userinfo.profile',
                   :strategy_class => OmniAuth::Strategies::GoogleOauth2
   end
   # ==> Warden configuration

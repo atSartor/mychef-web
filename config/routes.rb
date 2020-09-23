@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount API::Base, at: "/"
   get 'welcome/index'
   root 'welcome#index'
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
