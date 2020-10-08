@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/google/google-id-token.git
+  revision: 46ac65ff03bd125d93b5acadd1c1adbdb86d919c
+  specs:
+    google-id-token (1.4.2)
+      jwt (>= 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -299,9 +306,11 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  google-id-token!
   grape
   grape-active_model_serializers
   jbuilder (~> 2.7)
+  jwt
   omniauth
   omniauth-facebook
   omniauth-github

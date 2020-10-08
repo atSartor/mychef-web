@@ -27,7 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 #user authentication
 gem 'devise'
-
+gem 'google-id-token', git: 'https://github.com/google/google-id-token.git'
+gem 'jwt'
 #Used for login through Google
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
