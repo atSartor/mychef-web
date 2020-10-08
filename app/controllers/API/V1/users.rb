@@ -6,7 +6,7 @@ module API
       resource :users do
         desc "Retrun all users"
         get "" do
-          User.all
+          Recipe.all
         end
 
         desc "Return a user"
@@ -16,6 +16,7 @@ module API
         get ":id" do
           User.where(id: permitted_params[:id]).first!
         end
+
       end
     end
   end

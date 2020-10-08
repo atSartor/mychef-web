@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
@@ -27,7 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 #user authentication
 gem 'devise'
-
+gem 'google-id-token', git: 'https://github.com/google/google-id-token.git'
+gem 'jwt'
 #Used for login through Google
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
@@ -40,6 +41,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #for making rest-like API
 gem 'grape'
+gem 'grape_on_rails_routes'
 gem 'rack-cors'
 gem 'grape-active_model_serializers'
 

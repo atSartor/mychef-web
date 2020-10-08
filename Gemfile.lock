@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/google/google-id-token.git
+  revision: 46ac65ff03bd125d93b5acadd1c1adbdb86d919c
+  specs:
+    google-id-token (1.4.2)
+      jwt (>= 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -133,6 +140,8 @@ GEM
     grape-active_model_serializers (1.5.2)
       active_model_serializers (>= 0.10.0)
       grape (>= 0.8.0)
+    grape_on_rails_routes (0.3.2)
+      rails (>= 3.1.1)
     hashie (4.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
@@ -299,9 +308,12 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  google-id-token!
   grape
   grape-active_model_serializers
+  grape_on_rails_routes
   jbuilder (~> 2.7)
+  jwt
   omniauth
   omniauth-facebook
   omniauth-github
@@ -319,7 +331,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.4
