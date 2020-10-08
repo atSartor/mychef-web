@@ -41,6 +41,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #for making rest-like API
 gem 'grape'
+gem 'grape_on_rails_routes'
 gem 'rack-cors'
 gem 'grape-active_model_serializers'
 

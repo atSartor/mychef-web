@@ -140,6 +140,8 @@ GEM
     grape-active_model_serializers (1.5.2)
       active_model_serializers (>= 0.10.0)
       grape (>= 0.8.0)
+    grape_on_rails_routes (0.3.2)
+      rails (>= 3.1.1)
     hashie (4.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
@@ -309,6 +311,7 @@ DEPENDENCIES
   google-id-token!
   grape
   grape-active_model_serializers
+  grape_on_rails_routes
   jbuilder (~> 2.7)
   jwt
   omniauth
