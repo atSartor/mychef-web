@@ -6,21 +6,17 @@ module API
       prefix :api
       resource :recipes do
         post do
-          #TODO: redesign database schema to
-          # improve searchability i.e. not just raw JSON
-          # Decide on a permanent schema
-          # also, for this part, new_recipe = JSON.parse params
-          # will simplify your life
-          new_recipe = JSON.parse(params)
-          @rec = Recipe.create(title: new_recipe.title, total_time: new_recipe.total_time,
-                        yields: new_recipe.yields, instructions: new_recipe.instructions,
-                        image: new_recipe.image, host: new_recipe.image)
-          new_recipe.ingredients.each do |t|
-            unless Ingredient.find(t)
-              Ingredient.create(t)
+          @rec = Recipe.create(title: params[:title], total_time: params[:total_time],
+                        yields: params[:yields], instructions: params[:instructions],
+                        image: params[:image], host: params[:host])
+          params[:ingredients].each do |t|
+            if Ingredient.exists?(ingredient_name: t)
+              @rec.ingredients << Ingredient.where("ingredient_name = " + t)
+            else
+              @rec.ingredients.create(ingredient_name: t)
             end
           end
-          new_recipes = Recipe.create(recipe_raw: params)
+          @rec.save
         end
       end
     end
