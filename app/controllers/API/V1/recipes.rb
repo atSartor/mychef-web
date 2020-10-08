@@ -11,7 +11,7 @@ module API
                         image: params[:image], host: params[:host])
           params[:ingredients].each do |t|
             if Ingredient.exists?(ingredient_name: t)
-              @rec.ingredients << Ingredient.where("ingredient_name = " + t)
+              @rec.ingredients << Ingredient.where(ingredient_name: t)
             else
               @rec.ingredients.create(ingredient_name: t)
             end
