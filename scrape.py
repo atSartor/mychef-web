@@ -3,8 +3,8 @@ import requests
 import sys
 import json
 
-if len(sys.argv) > 2 and sys.argv[2] == '-p':
- api_url = 'http://localhost:3000/api/v1/recipes' #change when app working on heroku
+if len(sys.argv) > 2 and sys.argv[2] == 'p':
+ api_url = 'https://mychef-web.herokuapp.com/api/v1/recipes' #change when app working on heroku
 else:
  api_url = 'http://localhost:3000/api/v1/recipes'
 class JsonRecipe:
@@ -16,7 +16,6 @@ class JsonRecipe:
         self.instructions = ins
         self.image = im
         self.host = ho
-api_url = 'http://localhost:3000/api/v1/recipes'
 recipe_urls = open(sys.argv[1]).readlines()
 for recipe_url in recipe_urls:
     recipe = scrape_me(recipe_url.strip())

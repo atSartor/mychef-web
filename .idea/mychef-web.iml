@@ -65,7 +65,6 @@
     <orderEntry type="library" scope="PROVIDED" name="faraday (v1.0.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.13.1, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, RVM: ruby-2.6.6) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="google-id-token (v1.4.2@46ac65, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grape (v1.4.0, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grape-active_model_serializers (v1.5.2, RVM: ruby-2.6.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grape_on_rails_routes (v0.3.2, RVM: ruby-2.6.6) [gem]" level="application" />
