@@ -4,9 +4,9 @@ module API
       include API::V1::Defaults
 
       resource :users do
-        desc "Retrun all users"
+        desc "Return all users"
         get "" do
-          Recipe.all
+          User.all
         end
 
         desc "Return a user"
