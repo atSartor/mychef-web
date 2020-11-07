@@ -12,7 +12,7 @@ module API
         params do
           requires :search, type: String, desc: "User's search string"
         end
-        get ":search" do
+        get :search do
           #Recipe.where("title like ?", "%#{:search}%")
           Recipe.search_title(:search)
         end
