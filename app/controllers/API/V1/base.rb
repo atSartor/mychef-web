@@ -5,7 +5,7 @@ module API
       mount API::V1::Recipes
       mount API::V1::ShowRecipes
       mount API::V1::Authenticate
-      mount API::V1::Favorite
+      mount API::V1::Favorites
     end
   end
 end

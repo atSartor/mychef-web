@@ -1,6 +1,6 @@
 module API
   module V1
-    class Favorite < Grape::API
+    class Favorites < Grape::API
       include API::V1::Defaults
       format :json
       prefix :api
@@ -18,19 +18,12 @@ module API
           end
         end
 
-        desc "Adds a new favorite for a specified user"
-        params do
-          requires :user_id, type: String, desc: "User's ID Token value"
-          requires :recipe_id, type: String, desc: "Recipe's ID value"
-
-          put ':user_id' do
+          post ':user_id' do
             @current_user = UserToken.where(id: :user_id)
             @recipe = Recipe.where(id: :recipe_id)
             @favorite = Favorite.new(user_token_id: @current_user.id, recipe_id: @recipe.id)
             @favorite.save
           end
-        end
-
       end
     end
   end
